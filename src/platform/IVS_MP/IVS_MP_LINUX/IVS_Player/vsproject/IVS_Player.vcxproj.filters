@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\Render\D3dDraw.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\DdDraw.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\GdiDraw.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\Render.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\RenderAPI.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\RenderThreadMgr.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IVS_Player.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\AudioReassemble.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\H264Reassemble.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\MjpegReassemble.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\PacketReassemble.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\BaseDecoder.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\DecoderFactory.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\HisiDecoder.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\IntelDecoder.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\NvdiaDecoder.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\ThirdPartyDecoder.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\DecoderAPI.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\PacketMemoryPoolMgr.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\DecodeHandler.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\common\BaseThread\_BaseThread.cpp">
+      <Filter>inc\common\BaseThread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\common\BaseThread\BaseJob.cpp">
+      <Filter>inc\common\BaseThread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\BufferManager\BufferList2.cpp">
+      <Filter>src\Decoder\BufferManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\BufferManager\BufferManager.cpp">
+      <Filter>src\Decoder\BufferManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\DecoderIVS.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\AudioOutput.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\VideoOutput.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\channel\MediaChannelMgr.cpp">
+      <Filter>src\channel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\channel\MediaChannel.cpp">
+      <Filter>src\channel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\ReassembleAPI.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\Source.cpp">
+      <Filter>src\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\H264Source.cpp">
+      <Filter>src\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\MjpegSource.cpp">
+      <Filter>src\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\Mpeg4Source.cpp">
+      <Filter>src\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\Mp4FileSource.cpp">
+      <Filter>src\source\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\AviFileSource.cpp">
+      <Filter>src\source\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\DecryptData\DecryptData.cpp">
+      <Filter>src\Reassemble\DecryptData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\YuvUtil.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\PreDecoder.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\common\log\compat.cpp">
+      <Filter>inc\common\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\common\log\ivs_log.cpp">
+      <Filter>inc\common\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\common\log\log_conf.cpp">
+      <Filter>inc\common\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\common\Timer\ivs_timer.cpp">
+      <Filter>inc\common\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\HisiAudioDecoder.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ThirdParty\Intel\base_allocator.cpp">
+      <Filter>src\Decoder\Intel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ThirdParty\Intel\d3d_allocator.cpp">
+      <Filter>src\Decoder\Intel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ThirdParty\Intel\sysmem_allocator.cpp">
+      <Filter>src\Decoder\Intel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\FastMemcpy.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\inc\common\BaseThread\AutoMutex.cpp">
+      <Filter>inc\common\BaseThread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render\ColorConvert.cpp">
+      <Filter>src\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Recorder\AVIFileWriter.cpp">
+      <Filter>src\Recorder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Recorder\Mp4FileWriter.cpp">
+      <Filter>src\Recorder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Recorder\Recorder.cpp">
+      <Filter>src\Recorder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Recorder\RecorderAPI.cpp">
+      <Filter>src\Recorder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Capture\Capture.cpp">
+      <Filter>src\Capture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\DecryptData\Aes256_ctr_partial.cpp">
+      <Filter>src\Reassemble\DecryptData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\channel\AudioChannel.cpp">
+      <Filter>src\channel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\AudioCapture.cpp">
+      <Filter>src\Voice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\AudioSender.cpp">
+      <Filter>src\Voice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\RtspPacket.cpp">
+      <Filter>src\Voice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\VoiceControl.cpp">
+      <Filter>src\Voice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\NVSTimer\NVSTimer.cpp">
+      <Filter>src\Voice\NVSTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_thread.cpp">
+      <Filter>src\Voice\NVSTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_time.cpp">
+      <Filter>src\Voice\NVSTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_mutex.cpp">
+      <Filter>src\Voice\NVSTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_mem.cpp">
+      <Filter>src\Voice\NVSTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\FileSource.cpp">
+      <Filter>src\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MP4Praser\mp4_boxes.cpp">
+      <Filter>src\MP4Praser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MP4Praser\Mp4Box.cpp">
+      <Filter>src\MP4Praser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MP4Praser\Mp4RW.cpp">
+      <Filter>src\MP4Praser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MP4Praser\Single.cpp">
+      <Filter>src\MP4Praser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MP4Praser\Mp4PraserLib.cpp">
+      <Filter>src\MP4Praser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\WavFileSource.cpp">
+      <Filter>src\source\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\Mp3FileSource.cpp">
+      <Filter>src\source\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\source\AudioConverter.cpp">
+      <Filter>src\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Decoder\FrameInfo.cpp">
+      <Filter>src\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\HevcReassemble.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Reassemble\SVACReassemble.cpp">
+      <Filter>src\Reassemble</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Render\D3dDraw.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\DdDraw.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\GdiDraw.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\Render.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\RenderThreadMgr.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\IVS_Player.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\AudioReassemble.h">
+      <Filter>src\Reassemble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\H264Reassemble.h">
+      <Filter>src\Reassemble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\MjpegReassemble.h">
+      <Filter>src\Reassemble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\PacketReassemble.h">
+      <Filter>src\Reassemble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\BaseDecoder.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\DecoderFactory.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\HisiDecoder.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\IntelDecoder.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\NvdiaDecoder.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\ThirdPartyDecoder.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\IVSPlayerDataType.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\PacketMemoryPoolMgr.h">
+      <Filter>src\Reassemble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\DecodeHandler.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\BaseThread\_BaseThread.h">
+      <Filter>inc\common\BaseThread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\BaseThread\BaseJob.h">
+      <Filter>inc\common\BaseThread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\BufferManager\BufferList2.h">
+      <Filter>src\Decoder\BufferManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\BufferManager\BufferManager.h">
+      <Filter>src\Decoder\BufferManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\IVSCommon.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\DecoderIVS.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\AudioOutput.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\VideoOutput.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\RenderAPI.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DecoderAPI.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ReassembleAPI.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\channel\MediaChannelMgr.h">
+      <Filter>src\channel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\channel\MediaChannel.h">
+      <Filter>src\channel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\Source.h">
+      <Filter>src\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\H264Source.h">
+      <Filter>src\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\MjpegSource.h">
+      <Filter>src\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\Mpeg4Source.h">
+      <Filter>src\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\Mp4FileSource.h">
+      <Filter>src\source\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\AviFileSource.h">
+      <Filter>src\source\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\Lock.h">
+      <Filter>inc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\DecryptData\DecryptData.h">
+      <Filter>src\Reassemble\DecryptData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\YuvUtil.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\PreDecoder.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\log\compat.h">
+      <Filter>inc\common\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\log\ivs_io.h">
+      <Filter>inc\common\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\log\ivs_log.h">
+      <Filter>inc\common\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\log\log_conf.h">
+      <Filter>inc\common\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\Timer\ivs_timer.h">
+      <Filter>inc\common\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\HisiAudioDecoder.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Intel\base_allocator.h">
+      <Filter>src\Decoder\Intel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Intel\d3d_allocator.h">
+      <Filter>src\Decoder\Intel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Intel\sysmem_allocator.h">
+      <Filter>src\Decoder\Intel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\RtpDataType.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\FastMemcpy.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IVS_COMMON\inc\ivs_error.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\common\BaseThread\AutoMutex.h">
+      <Filter>inc\common\BaseThread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render\ColorConvert.h">
+      <Filter>src\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Recorder\AVIFileWriter.h">
+      <Filter>src\Recorder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Recorder\Mp4FileWriter.h">
+      <Filter>src\Recorder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Recorder\Recorder.h">
+      <Filter>src\Recorder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\RecorderAPI.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Capture\Capture.h">
+      <Filter>src\Capture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\DecryptData\Aes256_ctr_partial.h" />
+    <ClInclude Include="..\src\channel\AudioChannel.h">
+      <Filter>src\channel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Libjpeg\jmorecfg.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Libjpeg\jpeglib.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Libjpeg\jconfig.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Voice\AudioCapture.h">
+      <Filter>src\Voice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Voice\AudioSender.h">
+      <Filter>src\Voice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Voice\RtspPacket.h">
+      <Filter>src\Voice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Voice\VoiceControl.h">
+      <Filter>src\Voice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Voice\NVSTimer\NVSTimer.h">
+      <Filter>src\Voice\NVSTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuda.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuviddec.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\nvcuvid.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\builtin_types.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\channel_descriptor.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuda_runtime.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuda_runtime_api.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\device_types.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\driver_functions.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\driver_types.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\host_config.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\host_defines.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\surface_types.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\texture_types.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\vector_functions.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ThirdParty\Nvidia\vector_types.h">
+      <Filter>src\Decoder\nvidia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\FileSource.h">
+      <Filter>src\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MP4Praser\mp4_boxes.h">
+      <Filter>src\MP4Praser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MP4Praser\Mp4Box.h">
+      <Filter>src\MP4Praser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MP4Praser\Mp4PraserLib.h">
+      <Filter>src\MP4Praser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MP4Praser\Mp4RW.h">
+      <Filter>src\MP4Praser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MP4Praser\Single.h">
+      <Filter>src\MP4Praser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MP4Praser\Utls.h">
+      <Filter>src\MP4Praser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\WavFileSource.h">
+      <Filter>src\source\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\Mp3FileSource.h">
+      <Filter>src\source\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\source\AudioConverter.h">
+      <Filter>src\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Decoder\FrameInfo.h">
+      <Filter>src\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\HevcReassemble.h">
+      <Filter>src\Reassemble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Reassemble\SVACReassemble.h">
+      <Filter>src\Reassemble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\IVS_COMMON\inc\hwsdk.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\inc\common\log\Log.conf">
+      <Filter>inc\common\log</Filter>
+    </None>
+    <None Include="..\..\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="inc">
+      <UniqueIdentifier>{2ca1d978-05ba-49a9-85a1-7a12a2e6c41c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{198ef6d0-f7b5-410c-8fdf-fe4d22bb0bfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Render">
+      <UniqueIdentifier>{646c2448-715e-4338-bb45-583f88512c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Decoder">
+      <UniqueIdentifier>{94fbd2bb-af0c-4caa-99d4-743aac0975dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Reassemble">
+      <UniqueIdentifier>{2f43a8c3-fb25-4e97-921f-08816191a9f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\common">
+      <UniqueIdentifier>{68107441-e15d-4180-9732-b4fa89867624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\common\BaseThread">
+      <UniqueIdentifier>{5d70b97b-34d0-4e1b-b536-9752eccf3634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Decoder\BufferManager">
+      <UniqueIdentifier>{c9fccb38-e986-4364-834a-453b19b250bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Decoder\Intel">
+      <UniqueIdentifier>{2e31f20b-b756-4b0b-a819-3e3a6ef33d83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\channel">
+      <UniqueIdentifier>{64387767-3604-4a83-a319-0fc90a33b5c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\source">
+      <UniqueIdentifier>{a27fc3b8-db7d-4487-bf54-50413fe5c22f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\source\file">
+      <UniqueIdentifier>{51c6cd5e-5b7a-419a-938c-5316a8e94bb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Reassemble\DecryptData">
+      <UniqueIdentifier>{52f645af-a004-4466-9090-d893e5be2aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\common\Timer">
+      <UniqueIdentifier>{659ab212-296a-4740-9832-3e2bf79ef724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\common\log">
+      <UniqueIdentifier>{fec9e9b6-ec80-4465-a599-e5f1c6464399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Capture">
+      <UniqueIdentifier>{c15e6966-70ff-44d4-bbfd-866e580b74b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Voice">
+      <UniqueIdentifier>{969483ae-313a-49f4-968d-c5493e69bcc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Voice\NVSTimer">
+      <UniqueIdentifier>{5e439543-aaa3-478a-ab45-047948fedfef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Decoder\nvidia">
+      <UniqueIdentifier>{f15a6709-54a9-4144-9eda-ebb3d16beee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MP4Praser">
+      <UniqueIdentifier>{80138a34-a6d2-4c20-889e-60cafcb5398c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Recorder">
+      <UniqueIdentifier>{30eb89cd-6c29-4a76-9f0a-0313804f155c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,220 @@
+// IVS_OCXPlayer.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (IVS_OCXPlayer.tlb) that will become a resource in
+// IVS_OCXPlayer.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(72B4D993-872D-422B-AFAB-BE389255CF81), version(1.0),
+    control ]
+library IVS_OCXPlayer
+{
+    importlib(STDOLE_TLB);
+
+    //  Primary dispatch interface for CIVS_OCXPlayerCtrl
+    [ 
+        uuid(53E664DD-3322-4638-8082-85C397E75DB1)	
+    ]
+    dispinterface _DIVS_OCXPlayer
+    {
+    properties:
+    methods:
+        [id(34), helpstring("退出全屏播放")] LONG IVS_OCX_NormalScreenDisplay(void);
+        [id(35), helpstring("全屏显示播放窗口")] LONG IVS_OCX_FullScreenDisplay(void);
+        [id(36), helpstring("设置录像设备名")] LONG IVS_OCX_SetDeviceName(ULONG ulWndID, BSTR pDevName);
+        [id(37), helpstring("播放随路语音(实时/录像)")] ULONG IVS_OCX_PlaySound(LONG lWndID);
+        [id(38), helpstring("停止播放随路语音(实时/录像)")] ULONG IVS_OCX_StopSound(LONG lWndID);
+		[id(39)] LONG IVS_OCX_SetVolume(LONG lWndID, ULONG ulVolumeValue);
+		[id(40)] ULONG IVS_OCX_GetVolume(LONG lWndID);
+        [id(42), helpstring("设置激活窗口")] ULONG IVS_OCX_SetActiveWnd(ULONG ulWndID);
+        [id(43), helpstring("获取选中窗口编号")] ULONG IVS_OCX_GetSelectWnd(void);
+        [id(44), helpstring("通过窗口编号获取摄像头")] BSTR IVS_OCX_GetCameraByWnd(ULONG ulWndID);
+        [id(45), helpstring("设置OCX窗格工具栏按钮状态")] LONG IVS_OCX_SetToolbarButtonStatus(LONG lWndID, ULONG ulToolbarBtn, ULONG ulButtonStatus);
+        [id(46), helpstring("设置标题栏是否显示")] LONG IVS_OCX_ShowTitlebar(VARIANT_BOOL bShow);
+        [id(47), helpstring("设置工具栏是否显示")] LONG IVS_OCX_ShowToolbar(VARIANT_BOOL bShow);
+	    [id(49), helpstring("开始语音对讲")] BSTR IVS_OCX_StartVoiceTalkback(BSTR pTalkParam, BSTR pCameraCode);
+	    [id(50), helpstring("停止语音对讲")] LONG IVS_OCX_StopVoiceTalkback(ULONG ulTalkbackHandle);
+        [id(63), helpstring("开始实时浏览")] LONG IVS_OCX_StartRealPlay(BSTR pMediaPara, BSTR pCameraCode, LONG lWndID);
+        [id(64), helpstring("停止实时浏览")] LONG IVS_OCX_StopRealPlay(LONG lWndID);
+        [id(73), helpstring("根据鼠标位置获取窗口ID")] LONG IVS_OCX_GetMouseWnd(void);
+        [id(74), helpstring("获取下一个可用空闲窗口ID")] LONG IVS_OCX_GetFreeWnd(void);
+        [id(80), helpstring("初始化OCX")] LONG IVS_OCX_Init(void);
+        [id(81), helpstring("释放OCX")] LONG IVS_OCX_Cleanup(void);
+        [id(82), helpstring("获取版本号")] LONG IVS_OCX_GetVersion(void);
+        [id(85)] LONG IVS_OCX_SetWndLayout(ULONG lWindowsNum);
+        [id(87)] LONG IVS_OCX_Login(BSTR pUserName, BSTR pPWD, BSTR pServerIP,BSTR pPort, ULONG ulClientType);
+        [id(88), helpstring("初始化设置工具条")] LONG IVS_OCX_SetToolbar(ULONG ulToolbarFlag);
+        [id(89)] BSTR IVS_OCX_AddUser(BSTR pReqXml);
+        [id(90)] LONG IVS_OCX_DeleteUser(BSTR pDomainCode, ULONG ulUserID);
+        [id(91)] BSTR IVS_OCX_GetUserList(BSTR pUnifiedQuery);
+        [id(92)] LONG IVS_OCX_Logout(void);
+        [id(106)] BSTR IVS_OCX_GetUserInfo(BSTR pDomainCode, ULONG ulUserID);
+        [id(107)] LONG IVS_OCX_ChangePWD(BSTR pOldPWD, BSTR pNewPWD);
+        [id(108)] LONG IVS_OCX_ResetPWD(BSTR pDomainCode, ULONG ulUserID, BSTR pNewPWD);
+        [id(109)] BSTR IVS_OCX_GetUserGroupList(BSTR pReqXml);
+        [id(114)] BSTR IVS_OCX_ModifyRecordPlan(BSTR pRecordPlan);
+        [id(115)] BSTR IVS_OCX_DeleteRecordPlan(BSTR pDelRecPlanXML);
+        [id(116)] BSTR IVS_OCX_GetRecordPlan(BSTR pRecordPlanListReq);
+        [id(119)] BSTR IVS_OCX_QueryDeviceList(ULONG ulDeviceType, BSTR pQueryXml);
+        [id(120)] LONG IVS_OCX_ModifyUser(BSTR pReqXml);
+        [id(132)] BSTR IVS_OCX_GetRoleList(BSTR pDomainCode);
+        [id(133)] BSTR IVS_OCX_GetOnlineUser(BSTR pUnifiedQuery);
+        [id(145)] LONG IVS_OCX_SetUserDeviceList(BSTR pReqXml);
+        [id(146)] BSTR IVS_OCX_GetUserDeviceList(BSTR pUnifiedQuery);
+        [id(147)] LONG IVS_OCX_SignOutOnlineUser(BSTR pDomainCode, ULONG ulUserOnlineID);
+        [id(152)] BSTR IVS_OCX_GetRecordList(BSTR pCameraCode,ULONG lRecordMethod,BSTR pStartTime,BSTR pEndTime,ULONG lFromIndex,ULONG lToIndex);
+        [id(154)] BSTR IVS_OCX_GetNVRList(BSTR pUnifiedQuery);
+        [id(155)] BSTR IVS_OCX_GetDeviceGroup(BSTR pReqXml);
+        [id(158)] BSTR IVS_OCX_AddRecordPlan(BSTR pRecordPlan);
+        [id(166)] LONG IVS_OCX_SetDeviceConfig(LONG iConfigType, BSTR pDevCode, BSTR pReqXml);
+        [id(167)] BSTR IVS_OCX_GetDeviceConfig(LONG iConfigType,BSTR pReqXml);
+        [id(177)] LONG IVS_OCX_SetDisplayScale(LONG lDisplayScale);
+        [id(186)] LONG IVS_OCX_SubscribeAlarm(BSTR pReqXml);
+        [id(187)] BSTR IVS_OCX_SubscribeAlarmQuery(BSTR pReqXml);
+
+        [id(190)] BSTR IVS_OCX_GetDomainRoute(void);
+        [id(200)] BSTR IVS_OCX_AddAlarmLinkage(BSTR pReqXml);
+        [id(203)] LONG IVS_OCX_ModifyAlarmLinkage(BSTR pReqXml);
+        [id(204)] LONG IVS_OCX_DeleteAlarmLinkage(BSTR pReqXml);
+        [id(201)] BSTR IVS_OCX_GetAlarmLinkage(BSTR pReqXml);
+        [id(202)] BSTR IVS_OCX_GetAlarmLinkageList(BSTR pReqXml);
+		[id(213)] BSTR IVS_OCX_GetAlarmEventList(BSTR pReqXml);
+		[id(218)] BSTR IVS_OCX_QueryRecordList(BSTR pUnifiedQuery);
+		[id(223)] BSTR IVS_OCX_GetRecordPolicyByTime(BSTR pCameraCode);
+		[id(227)] BSTR IVS_OCX_PtzControl(BSTR pCameraCode,LONG lOperateCode, BSTR pControlPara1, BSTR pControlPara2);
+		[id(231)] LONG IVS_OCX_SetRecordPolicyByTime(BSTR pRecordPolicyXml);
+		[id(232)] BSTR IVS_OCX_GetUserID(void);
+        [id(241)] LONG IVS_OCX_StartPlatformPlayBack(BSTR pCameraCode, BSTR pPlaybackParam, LONG lWndID);
+        [id(242)] LONG IVS_OCX_StopPlatformPlayBack(LONG lWndID);
+        [id(243)] LONG IVS_OCX_PlayBackPause(LONG lWndID);
+        [id(244)] LONG IVS_OCX_PlayBackResume(LONG lWndID);
+        [id(245)] LONG IVS_OCX_PlaybackFrameStepForward(LONG lWndID);
+        [id(246)] LONG IVS_OCX_SetPlayBackSpeed(LONG lWndID, FLOAT fSpeed);
+        [id(247)] BSTR IVS_OCX_GetPlayBackSpeed(LONG lWndID);
+        [id(248)] BSTR IVS_OCX_GetPlayBackTime(LONG lWndID);
+        [id(249)] BSTR IVS_OCX_GetPlayBackStatus(LONG lWndID);
+        [id(250)] LONG IVS_OCX_SetIAToolbar(ULONG ulToolbarFlag);
+		[id(254)] LONG IVS_OCX_WinUserLogin(BSTR pUserName, BSTR pPWD, BSTR pServerIP, BSTR pServerPort, BSTR pDomainName, ULONG ulLoginType, ULONG ulClientType);
+		[id(257)] LONG IVS_OCX_SetPlayBackTime(LONG lWndID, ULONG ulTime);
+		[id(261)] ULONG IVS_OCX_StartLocalRecord(BSTR pRecordPara, LONG lWndID);
+		[id(262)] LONG IVS_OCX_StopLocalRecord(LONG lWndID);
+		[id(265)] BSTR IVS_OCX_GetGraphics(ULONG ulWindowID);
+		[id(276), helpstring("根据用户输入的设备类型获取相应的设备列表")] BSTR IVS_OCX_GetDeviceList(ULONG ulDeviceType, ULONG ulFromIndex, ULONG ulToIndex);
+		[id(322)] BSTR IVS_OCX_AddBookmark(BSTR pNVRCode,BSTR pCameraCode,BSTR pBookmarkName,BSTR pBookmarkTime);
+		[id(323)] BSTR IVS_OCX_GetBookmarkList(BSTR pQueryXml);
+		[id(324)] LONG IVS_OCX_ModifyBookmark(BSTR pNVRCode,BSTR pCameraCode,ULONG ulBookmarkID,BSTR pNewBookmarkName);
+		[id(325)] LONG IVS_OCX_DeleteBookmark(BSTR pNVRCode,BSTR pCameraCode,ULONG ulBookmarkID);
+		[id(326)] BSTR IVS_OCX_AddPTZPreset(BSTR pCameraCode, BSTR pPresetName);
+		[id(327)] LONG IVS_OCX_DelPTZPreset(BSTR pCameraCode, ULONG ulPresetIndex);
+		[id(328)] LONG IVS_OCX_ModPTZPreset(BSTR pCameraCode, ULONG ulPresetIndex, BSTR pPresetName);
+		[id(329)] BSTR IVS_OCX_GetPTZPresetList(BSTR pCameraCode);
+		[id(330)] LONG IVS_OCX_SetGuardPos(BSTR pGuardPosInfo);
+		[id(331)] BSTR IVS_OCX_GetGuardPos(BSTR pCameraCode);
+		[id(332)] BSTR IVS_OCX_AddCruiseTrack(BSTR pCuriseTrackInfo);
+		[id(333)] LONG IVS_OCX_DelCruiseTrack(BSTR pCameraCode, ULONG ulTrackIndex, ULONG ulCruiseType);
+		[id(334)] LONG IVS_OCX_ModCruiseTrack(BSTR pCuriseTrackInfo);
+		[id(335)] BSTR IVS_OCX_GetCruiseTrackList(BSTR pCameraCode);
+		[id(336)] BSTR IVS_OCX_GetCruiseTrack(BSTR pCameraCode, ULONG ulTrackIndex);
+		[id(337)] LONG IVS_OCX_SetCruisePlan(BSTR pCruisePlan);
+		[id(338)] BSTR IVS_OCX_GetCruisePlan(BSTR pCameraCode);
+		[id(344)] LONG IVS_OCX_LocalSnapshot(LONG lWndID);
+		[id(345)] LONG IVS_OCX_PlatformSnapshot(BSTR pCameraCode);
+		[id(346)] BSTR IVS_OCX_GetSnapshotList(BSTR pQueryParam);
+		[id(348)] LONG IVS_OCX_DeleteSnapshot(BSTR pCameraCode, ULONG ulPictureID);
+		[id(356)] LONG IVS_OCX_StartPlatformRecord(BSTR pCameraCode,ULONG ulRecordTime);
+		[id(357)] LONG IVS_OCX_StopPlatformRecord (BSTR pCameraCode);
+		[id(358)] LONG IVS_OCX_StartPURecord(BSTR pCameraCode,ULONG ulRecordTime);
+		[id(359)] LONG IVS_OCX_StopPURecord (BSTR pCameraCode);
+        [id(360)] LONG IVS_OCX_StartAlarmOut(BSTR pAlarmOutCode);
+		[id(361)] LONG IVS_OCX_StopAlarmOut(BSTR pAlarmOutCode);
+		[id(364)] LONG IVS_OCX_SetWndType(ULONG ulWindID,ULONG ulTyle);
+		[id(369)] LONG IVS_OCX_SetLanguage(BSTR pLanguage);
+		[id(375)] BSTR IVS_OCX_GetDeviceAlarmList(BSTR pReqXml);
+		[id(383), helpstring("开始实时语音广播")] LONG IVS_OCX_StartRealBroadcast(void);
+		[id(384), helpstring("停止实时语音广播")] LONG IVS_OCX_StopRealBroadcast(void);
+		[id(385), helpstring("开始文件语音广播")] LONG IVS_OCX_StartFileBroadcast(BSTR pFileName, ULONG ulCycle);
+		[id(386), helpstring("停止文件语音广播")] LONG IVS_OCX_StopFileBroadcast(void);
+		[id(387), helpstring("添加广播摄像机")] LONG IVS_OCX_AddBroadcastDevice(BSTR pCameraCode);
+		[id(388), helpstring("删除广播摄像机")] LONG IVS_OCX_DeleteBroadcastDevice(BSTR pCameraCode);
+		[id(390), helpstring("获取窗口类型")] LONG IVS_OCX_GetWndType(ULONG ulWndID);
+		[id(396)] LONG IVS_OCX_PlaybackFrameStepBackward(LONG lWndID);
+		[id(397)] LONG IVS_OCX_StartSyncPlay(BSTR pSyncPlayInfo);
+		[id(398)] LONG IVS_OCX_StopSyncPlay(void);
+		[id(401)] LONG IVS_OCX_SignOutUser(BSTR pDomainCode, ULONG ulUserID);
+		[id(402)] BSTR IVS_OCX_StartPlatformDownload(BSTR pCameraCode, BSTR pStartTime, BSTR pEndTime, BSTR pDownloadParamXml);
+		[id(403)] LONG IVS_OCX_StopPlatformDownload(ULONG ulDownloadHandle);
+		[id(404)] BSTR IVS_OCX_StartPUDownload(BSTR pCameraCode, BSTR pStartTime, BSTR pEndTime, BSTR pDownloadParamXml);
+		[id(405)] LONG IVS_OCX_StopPUDownload(ULONG ulDownloadHandle);
+		[id(406)] LONG IVS_OCX_DownloadPause(ULONG ulDownloadHandle);
+		[id(407)] LONG IVS_OCX_DownloadResume(ULONG ulDownloadHandle);
+		[id(408)] BSTR IVS_OCX_GetDownloadInfo(ULONG ulDownloadHandle);
+		[id(409)] LONG IVS_OCX_StartPUPlayBack(BSTR pCameraCode, BSTR pPlaybackParam, LONG lWndID);
+		[id(410)] LONG IVS_OCX_StopPUPlayBack(LONG lWndID);
+		[id(418)] void IVS_OCX_SetEventReceiver(void);
+		[id(419), helpstring("实况窗口不需要Drag")] LONG IVS_OCX_SetWndDrag(ULONG ulWndID,ULONG ulEnable);
+		[id(420), helpstring("刷新窗口bar位置")] void IVS_OCX_RefreshWnd(ULONG ulRefreshType);
+		[id(421)]BSTR IVS_OCX_GetAlarmLinkageAction(BSTR pReqXml);
+
+		[id(465)] LONG IVS_OCX_StartLocalPlayBack(LONG lWndID, BSTR pFileName, BSTR pPlaybackParam);
+		[id(466)] LONG IVS_OCX_StopLocalPlayBack(LONG lWndID);
+		[id(480)] LONG IVS_OCX_SetLogPath(BSTR pLogPath);
+        [id(481)] LONG IVS_OCX_SignOutUserByRole(BSTR pDomainCode, ULONG ulRoleID);
+		[id(484)] LONG IVS_OCX_ShowInstantReplayBar(ULONG ulWndID,ULONG ulStyle);
+		[id(486)] BSTR IVS_OCX_GetAlarmSnapshotList(BSTR pQueryParam);
+		[id(508)] LONG IVS_OCX_DelGuardPos(BSTR pGuardPosInfo);
+		[id(512), helpstring("获取轮训计划")] BSTR IVS_OCX_GetCameraSwitchPlanTVWall(ULONG ulTVWallID,BSTR pCameraSwitchID);
+		[id(519)] ULONG IVS_OCX_GetPaneWnd(ULONG ulWndID);
+		[id(521)] LONG IVS_OCX_SetSkin(ULONG ulSkinType);
+		[id(533)] void IVS_OCX_EnableExchangePane(ULONG ulStatus);
+		[id(541)] ULONG IVS_OCX_SetTitleBarStatus(ULONG ulWndID, ULONG ulStatusType, ULONG ulShow);
+		[id(544)] BSTR IVS_OCX_GetBroadcastCameraList(void);
+		[id(559), helpstring("查询单台VCN的视频质量诊断计划")] BSTR IVS_OCX_GetVideoDiagnose(BSTR pDomainCode, BSTR pCameraCode);
+		[id(560), helpstring("设置单台VCN的视频质量诊断计划")] LONG IVS_OCX_SetVideoDiagnose(BSTR pReqXml);
+		[id(561), helpstring("根据摄像机Code，查询该摄像机正在给哪些用户提供视频业务")] BSTR IVS_OCX_GetStreamListByCam(BSTR pDomainCode, BSTR pCameraCode);
+		[id(562), helpstring("关闭指定用户的视频")] LONG IVS_OCX_ShutdownStreamByUser(BSTR pDomainCode, ULONG ulUserID, BSTR pCameraCode, LONG lStreamType, LONG lDuration);
+		[id(563), helpstring("根据用户编码，查询该用户正在给调用哪些摄像机的视频业务")] BSTR IVS_OCX_GetStreamListByUser(BSTR pDomainCode, ULONG ulUserID);
+		[id(564), helpstring("设置对讲音量")] LONG IVS_OCX_SetMicVolume(ULONG ulVolumeValue);
+		[id(565), helpstring("获取对讲音量")] ULONG IVS_OCX_GetMicVolume(void);
+		[id(566), helpstring("本地图像抓拍并保存到指定路径")] LONG IVS_OCX_LocalSnapshotToDir(LONG lWndID, ULONG ulPictureFormat, BSTR pFileName);
+		[id(567), helpstring("设置录像视频质量")] LONG IVS_OCX_SetVideoEffect(LONG lWndID, LONG lBrightValue, LONG lContrastValue, LONG lSaturationValue, LONG lHueValue);
+		[id(568), helpstring("获取指定域所包含的设备列表")] BSTR IVS_OCX_GetDomainDeviceList(BSTR pDomainCode, ULONG ulDeviceType, ULONG ulFromIndex, ULONG ulToIndex);
+		[id(569), helpstring("启动OCX绘图回调")] LONG IVS_OCX_EnableDrawCallBackEx(ULONG ulWindowID);
+		[id(570), helpstring("停止OCX绘图回调")] LONG IVS_OCX_DisableDrawCallBackEx(ULONG ulWindowID);
+}
+    //  Event dispatch interface for CIVS_OCXPlayerCtrl
+
+    [ 
+        uuid(8F5A25B5-B120-4C4B-B796-27904B2F5921)	
+    ]
+    dispinterface _DIVS_OCXPlayerEvents
+    {
+    properties:
+        //  Event interface has no properties
+
+    methods:
+        [id(17)] void IVS_OCX_Event(LONG lEventType, BSTR pEventContent);
+        [id(18)] void OnOCXInfoButtonClick(ULONG ulWndID, BSTR strDeviceName, ULONG ulVideoState, ULONG ulAudioState, ULONG ulFPS, ULONG ulCodeRate, ULONG ulVideoFomate);
+        [id(19)] void OnAlarmLinkage(BSTR pAlarmLinkage);
+        [id(20)] void OnAlarmReporter(BSTR pAarmReporter);
+        [id(21)] void OnKeepAlive(ULONG ulResult);
+	    [id(22)] void IVS_OCX_OnTVWall(BSTR pTVWallMsg);
+		[id(23)] void IVS_OCX_Windows_Event(LONG lEventType, BSTR pEventContent);
+        [id(24)] void OnNetKeyBoard(BSTR pNetKeyBoardMsg);
+		[id(25), helpstring("智能分析画图回调")] void IVS_OCX_DrawCallBackEx_Event(ULONG ulWindowID, LONG hDC, LONG left, LONG top, LONG right, LONG bottom, ULONGLONG ulFrame);
+	};
+
+	// C30 uuid(E81D3060-D081-4012-A754-88D3FF824169)
+	// C60 uuid(FA7F8CDF-D58E-46C5-9923-DE376C24556F)
+    // Class information for CIVS_OCXPlayerCtrl
+	// 原来的是6A04070B-ED54-4D20-B8C4-B1AEB7756D85
+    [
+        uuid(3556A474-8B23-496F-9E5D-38F7B74654F4), licensed
+    ]
+    coclass IVS_OCXPlayer
+    {
+        [default] dispinterface _DIVS_OCXPlayer;
+        [default, source] dispinterface _DIVS_OCXPlayerEvents;
+    };
+};

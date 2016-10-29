@@ -1,0 +1,120 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: test - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\L00254~1\AppData\Local\Temp\RSPB978.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\prjs\securapi2014\test\testmain.c"
+]
+Creating command line "cl.exe @C:\Users\L00254~1\AppData\Local\Temp\RSPB978.tmp" 
+Creating temporary file "C:\Users\L00254~1\AppData\Local\Temp\RSPB979.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/test.pdb" /debug /machine:I386 /out:"Debug/test.exe" /pdbtype:sept 
+.\Debug\fscanf_s.obj
+.\Debug\fwscanf_s.obj
+.\Debug\gets_s.obj
+.\Debug\memcpy_s.obj
+.\Debug\memmove_s.obj
+.\Debug\memset_s.obj
+.\Debug\scanf_s.obj
+.\Debug\securecutil.obj
+.\Debug\secureinput_a.obj
+.\Debug\secureinput_w.obj
+.\Debug\secureprintoutput_a.obj
+.\Debug\secureprintoutput_w.obj
+.\Debug\snprintf_s.obj
+.\Debug\sprintf_s.obj
+.\Debug\sscanf_s.obj
+.\Debug\strcat_s.obj
+.\Debug\strcpy_s.obj
+.\Debug\strncat_s.obj
+.\Debug\strncpy_s.obj
+.\Debug\strtok_s.obj
+.\Debug\swprintf_s.obj
+.\Debug\swscanf_s.obj
+.\Debug\testmain.obj
+.\Debug\vfscanf_s.obj
+.\Debug\vfwscanf_s.obj
+.\Debug\vscanf_s.obj
+.\Debug\vsnprintf_s.obj
+.\Debug\vsprintf_s.obj
+.\Debug\vsscanf_s.obj
+.\Debug\vswprintf_s.obj
+.\Debug\vswscanf_s.obj
+.\Debug\vwscanf_s.obj
+.\Debug\wcscat_s.obj
+.\Debug\wcscpy_s.obj
+.\Debug\wcsncat_s.obj
+.\Debug\wcsncpy_s.obj
+.\Debug\wcstok_s.obj
+.\Debug\wmemcpy_s.obj
+.\Debug\wmemmove_s.obj
+.\Debug\wscanf_s.obj
+]
+Creating command line "link.exe @C:\Users\L00254~1\AppData\Local\Temp\RSPB979.tmp"
+<h3>Output Window</h3>
+Compiling...
+testmain.c
+d:\prjs\securapi2014\test\testmain.c(144) : warning C4013: 'isspace' undefined; assuming extern returning int
+d:\prjs\securapi2014\test\testmain.c(89) : warning C4101: 'fv' : unreferenced local variable
+d:\prjs\securapi2014\test\testmain.c(100) : warning C4101: 'wcc' : unreferenced local variable
+Linking...
+Creating temporary file "C:\Users\L00254~1\AppData\Local\Temp\RSPBB00.tmp" with contents
+[
+/nologo /o"Debug/test.bsc" 
+.\Debug\fscanf_s.sbr
+.\Debug\fwscanf_s.sbr
+.\Debug\gets_s.sbr
+.\Debug\memcpy_s.sbr
+.\Debug\memmove_s.sbr
+.\Debug\memset_s.sbr
+.\Debug\scanf_s.sbr
+.\Debug\securecutil.sbr
+.\Debug\secureinput_a.sbr
+.\Debug\secureinput_w.sbr
+.\Debug\secureprintoutput_a.sbr
+.\Debug\secureprintoutput_w.sbr
+.\Debug\snprintf_s.sbr
+.\Debug\sprintf_s.sbr
+.\Debug\sscanf_s.sbr
+.\Debug\strcat_s.sbr
+.\Debug\strcpy_s.sbr
+.\Debug\strncat_s.sbr
+.\Debug\strncpy_s.sbr
+.\Debug\strtok_s.sbr
+.\Debug\swprintf_s.sbr
+.\Debug\swscanf_s.sbr
+.\Debug\testmain.sbr
+.\Debug\vfscanf_s.sbr
+.\Debug\vfwscanf_s.sbr
+.\Debug\vscanf_s.sbr
+.\Debug\vsnprintf_s.sbr
+.\Debug\vsprintf_s.sbr
+.\Debug\vsscanf_s.sbr
+.\Debug\vswprintf_s.sbr
+.\Debug\vswscanf_s.sbr
+.\Debug\vwscanf_s.sbr
+.\Debug\wcscat_s.sbr
+.\Debug\wcscpy_s.sbr
+.\Debug\wcsncat_s.sbr
+.\Debug\wcsncpy_s.sbr
+.\Debug\wcstok_s.sbr
+.\Debug\wmemcpy_s.sbr
+.\Debug\wmemmove_s.sbr
+.\Debug\wscanf_s.sbr]
+Creating command line "bscmake.exe @C:\Users\L00254~1\AppData\Local\Temp\RSPBB00.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+test.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

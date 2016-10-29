@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eSDK_Secure_C", "eSDK_Secure_C\eSDK_Secure_C.vcxproj", "{775F5032-9527-476E-A59C-39A970F54EB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Debug|Win32.Build.0 = Debug|Win32
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Debug|x64.ActiveCfg = Debug|x64
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Debug|x64.Build.0 = Debug|x64
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Release|Win32.ActiveCfg = Release|Win32
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Release|Win32.Build.0 = Release|Win32
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Release|x64.ActiveCfg = Release|x64
+		{775F5032-9527-476E-A59C-39A970F54EB8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

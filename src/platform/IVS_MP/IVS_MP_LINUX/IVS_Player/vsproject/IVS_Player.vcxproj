@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C0A9BA83-B749-441B-9055-FC312E0816C4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>IVS_Player</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\IVS_SDK\build\windows\Debug\IVS_SDK\bin</OutDir>
+    <IntDir>..\..\..\IVS_SDK\build\windows\Debug\IVS_SDK\bin\temp_player</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\IVS_SDK\build\windows\release\IVS_SDK\bin</OutDir>
+    <IntDir>..\..\..\IVS_SDK\build\windows\release\IVS_SDK\bin\temp_player</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;IVS_PLAYER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\inc;..\..\inc\;..\src\channel;..\src\source;..\..\inc\common\log;..\..\inc\common;..\..\inc\common\BaseThread;..\..\..\IVS_COMMON\inc\;..\src\log\;..\src\Decoder\Hisilicon;..\..\ThirdParty\Libjpeg;..\..\ThirdParty\Nvidia;..\..\ThirdParty\Mp4;..\..\ThirdParty\Intel;..\..\inc\common\Timer;..\src\Capture;..\src\Decoder;..\src\Reassemble\DecryptData;..\src\Voice</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>WS2_32.LIB;libmfx.lib;hi_h264dec_w.lib;hi_mjpeg_dec_w.lib;lib_VoiceEngine_lib32.lib;cudart.lib;nvapi.lib;WinMM.Lib;MSAcm32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\lib\windows\Debug;..\lib;..\lib\IntelMediaSDKCommon\Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/NODEFAULTLIB:"libci.lib" /NODEFAULTLIB:"libc.lib" /NODEFAULTLIB:"LIBCMT.lib" /NODEFAULTLIB:"libm.lib" /NODEFAULTLIB:"libguide.lib" /NODEFAULTLIB:"libirc.lib" %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreSpecificDefaultLibraries>libmmt.lib;svml_disp.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "..\..\..\IVS_SDK\build\windows\debug\IVS_SDK\bin\IVS_Playerd.lib" "..\..\..\IVS_SDK\lib\windows\Debug" /y</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy "..\..\lib\windows\Debug\cudart32_42_9.dll" "..\..\..\IVS_SDK\build\windows\debug\IVS_SDK\bin" /y
+copy "..\..\lib\windows\Debug\libmpg123.dll" "..\..\..\IVS_SDK\build\windows\debug\IVS_SDK\bin" /y
+copy "..\..\lib\windows\Debug\mp4DLL.dll" "..\..\..\IVS_SDK\build\windows\debug\IVS_SDK\bin" /y</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;IVS_PLAYER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\inc\common\log;..\inc;..\src\Capture;..\..\inc\;..\src\channel;..\src\source;..\..\inc\common;..\..\inc\common\BaseThread;..\..\..\IVS_COMMON\inc\;..\src\log\;..\src\Decoder\Hisilicon;..\..\ThirdParty\Libjpeg;..\..\ThirdParty\Mp4;..\..\ThirdParty\Nvidia;..\..\ThirdParty\Intel;..\..\inc\common\Timer;..\src\Decoder;..\src\Reassemble\DecryptData;..\src\Voice</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\lib\windows\Release;..\lib;..\lib\IntelMediaSDKCommon\Win32\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>WS2_32.LIB;libmfx.lib;dxva2.lib;igfx_s3dcontrol.lib;comsuppw.lib;hi_h264dec_w.lib;hi_mjpeg_dec_w.lib;lib_VoiceEngine_lib32.lib;cudart.lib;nvapi.lib;WinMM.Lib;MSAcm32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libmmt.lib;svml_disp.lib;libirc.lib;libguide.lib;libm.lib;libc.lib;LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/NODEFAULTLIB:"libci.lib" /NODEFAULTLIB:"libc.lib" /NODEFAULTLIB:"LIBCMT.lib" /NODEFAULTLIB:"libm.lib" /NODEFAULTLIB:"libguide.lib" /NODEFAULTLIB:"libirc.lib" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "..\..\..\IVS_SDK\build\windows\release\IVS_SDK\bin\IVS_Player.lib" "..\..\..\IVS_SDK\lib\windows\Release" /y</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy "..\..\lib\windows\Release\cudart32_42_9.dll" "..\..\..\IVS_SDK\build\windows\release\IVS_SDK\bin" /y
+copy "..\..\lib\windows\Release\libmpg123.dll" "..\..\..\IVS_SDK\build\windows\release\IVS_SDK\bin" /y
+copy "..\..\lib\windows\Release\mp4DLL.dll" "..\..\..\IVS_SDK\build\windows\release\IVS_SDK\bin" /y</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\inc\common\log\Log.conf" />
+    <None Include="..\..\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\inc\common\BaseThread\AutoMutex.cpp" />
+    <ClCompile Include="..\..\inc\common\BaseThread\BaseJob.cpp" />
+    <ClCompile Include="..\..\inc\common\BaseThread\_BaseThread.cpp" />
+    <ClCompile Include="..\..\inc\common\log\compat.cpp" />
+    <ClCompile Include="..\..\inc\common\log\ivs_log.cpp" />
+    <ClCompile Include="..\..\inc\common\log\log_conf.cpp" />
+    <ClCompile Include="..\..\inc\common\Timer\ivs_timer.cpp" />
+    <ClCompile Include="..\..\ThirdParty\Intel\base_allocator.cpp" />
+    <ClCompile Include="..\..\ThirdParty\Intel\d3d_allocator.cpp" />
+    <ClCompile Include="..\..\ThirdParty\Intel\sysmem_allocator.cpp" />
+    <ClCompile Include="..\src\Capture\Capture.cpp" />
+    <ClCompile Include="..\src\channel\AudioChannel.cpp" />
+    <ClCompile Include="..\src\channel\MediaChannel.cpp" />
+    <ClCompile Include="..\src\channel\MediaChannelMgr.cpp" />
+    <ClCompile Include="..\src\Decoder\BaseDecoder.cpp" />
+    <ClCompile Include="..\src\Decoder\BufferManager\BufferList2.cpp" />
+    <ClCompile Include="..\src\Decoder\BufferManager\BufferManager.cpp" />
+    <ClCompile Include="..\src\Decoder\DecodeHandler.cpp" />
+    <ClCompile Include="..\src\Decoder\DecoderAPI.cpp" />
+    <ClCompile Include="..\src\Decoder\DecoderFactory.cpp" />
+    <ClCompile Include="..\src\Decoder\DecoderIVS.cpp" />
+    <ClCompile Include="..\src\Decoder\FrameInfo.cpp" />
+    <ClCompile Include="..\src\Decoder\HisiAudioDecoder.cpp" />
+    <ClCompile Include="..\src\Decoder\HisiDecoder.cpp" />
+    <ClCompile Include="..\src\Decoder\IntelDecoder.cpp" />
+    <ClCompile Include="..\src\Decoder\NvdiaDecoder.cpp" />
+    <ClCompile Include="..\src\Decoder\PreDecoder.cpp" />
+    <ClCompile Include="..\src\Decoder\ThirdPartyDecoder.cpp" />
+    <ClCompile Include="..\src\dllmain.cpp" />
+    <ClCompile Include="..\src\IVS_Player.cpp" />
+    <ClCompile Include="..\src\MP4Praser\Mp4Box.cpp" />
+    <ClCompile Include="..\src\MP4Praser\Mp4PraserLib.cpp" />
+    <ClCompile Include="..\src\MP4Praser\Mp4RW.cpp" />
+    <ClCompile Include="..\src\MP4Praser\mp4_boxes.cpp" />
+    <ClCompile Include="..\src\MP4Praser\Single.cpp" />
+    <ClCompile Include="..\src\Reassemble\AudioReassemble.cpp" />
+    <ClCompile Include="..\src\Reassemble\DecryptData\Aes256_ctr_partial.cpp" />
+    <ClCompile Include="..\src\Reassemble\DecryptData\DecryptData.cpp" />
+    <ClCompile Include="..\src\Reassemble\H264Reassemble.cpp" />
+    <ClCompile Include="..\src\Reassemble\HevcReassemble.cpp" />
+    <ClCompile Include="..\src\Reassemble\MjpegReassemble.cpp" />
+    <ClCompile Include="..\src\Reassemble\PacketMemoryPoolMgr.cpp" />
+    <ClCompile Include="..\src\Reassemble\PacketReassemble.cpp" />
+    <ClCompile Include="..\src\Reassemble\ReassembleAPI.cpp" />
+    <ClCompile Include="..\src\Reassemble\SVACReassemble.cpp" />
+    <ClCompile Include="..\src\Recorder\AVIFileWriter.cpp" />
+    <ClCompile Include="..\src\Recorder\Mp4FileWriter.cpp" />
+    <ClCompile Include="..\src\Recorder\Recorder.cpp" />
+    <ClCompile Include="..\src\Recorder\RecorderAPI.cpp" />
+    <ClCompile Include="..\src\Render\AudioOutput.cpp" />
+    <ClCompile Include="..\src\Render\ColorConvert.cpp" />
+    <ClCompile Include="..\src\Render\D3dDraw.cpp" />
+    <ClCompile Include="..\src\Render\DdDraw.cpp" />
+    <ClCompile Include="..\src\Render\FastMemcpy.cpp" />
+    <ClCompile Include="..\src\Render\GdiDraw.cpp" />
+    <ClCompile Include="..\src\Render\Render.cpp" />
+    <ClCompile Include="..\src\Render\RenderAPI.cpp" />
+    <ClCompile Include="..\src\Render\RenderThreadMgr.cpp" />
+    <ClCompile Include="..\src\Render\VideoOutput.cpp" />
+    <ClCompile Include="..\src\Render\YuvUtil.cpp" />
+    <ClCompile Include="..\src\source\AudioConverter.cpp" />
+    <ClCompile Include="..\src\source\AviFileSource.cpp" />
+    <ClCompile Include="..\src\source\FileSource.cpp" />
+    <ClCompile Include="..\src\source\H264Source.cpp" />
+    <ClCompile Include="..\src\source\MjpegSource.cpp" />
+    <ClCompile Include="..\src\source\Mp3FileSource.cpp" />
+    <ClCompile Include="..\src\source\Mp4FileSource.cpp" />
+    <ClCompile Include="..\src\source\Mpeg4Source.cpp" />
+    <ClCompile Include="..\src\source\Source.cpp" />
+    <ClCompile Include="..\src\source\WavFileSource.cpp" />
+    <ClCompile Include="..\src\Voice\AudioCapture.cpp" />
+    <ClCompile Include="..\src\Voice\AudioSender.cpp" />
+    <ClCompile Include="..\src\Voice\NVSTimer\NVSTimer.cpp" />
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_mem.cpp" />
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_mutex.cpp" />
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_thread.cpp" />
+    <ClCompile Include="..\src\Voice\NVSTimer\vos_time.cpp" />
+    <ClCompile Include="..\src\Voice\RtspPacket.cpp" />
+    <ClCompile Include="..\src\Voice\VoiceControl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\IVS_COMMON\inc\hwsdk.h" />
+    <ClInclude Include="..\..\inc\common\BaseThread\AutoMutex.h" />
+    <ClInclude Include="..\..\IVS_COMMON\inc\ivs_error.h" />
+    <ClInclude Include="..\..\inc\common\BaseThread\BaseJob.h" />
+    <ClInclude Include="..\..\inc\common\BaseThread\_BaseThread.h" />
+    <ClInclude Include="..\..\inc\common\Lock.h" />
+    <ClInclude Include="..\..\inc\common\log\compat.h" />
+    <ClInclude Include="..\..\inc\common\log\ivs_io.h" />
+    <ClInclude Include="..\..\inc\common\log\ivs_log.h" />
+    <ClInclude Include="..\..\inc\common\log\log_conf.h" />
+    <ClInclude Include="..\..\inc\common\Timer\ivs_timer.h" />
+    <ClInclude Include="..\..\inc\IVSCommon.h" />
+    <ClInclude Include="..\..\inc\IVSPlayerDataType.h" />
+    <ClInclude Include="..\..\inc\IVS_Player.h" />
+    <ClInclude Include="..\..\inc\RtpDataType.h" />
+    <ClInclude Include="..\..\ThirdParty\Intel\base_allocator.h" />
+    <ClInclude Include="..\..\ThirdParty\Intel\d3d_allocator.h" />
+    <ClInclude Include="..\..\ThirdParty\Intel\sysmem_allocator.h" />
+    <ClInclude Include="..\..\ThirdParty\Libjpeg\jconfig.h" />
+    <ClInclude Include="..\..\ThirdParty\Libjpeg\jmorecfg.h" />
+    <ClInclude Include="..\..\ThirdParty\Libjpeg\jpeglib.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\builtin_types.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\channel_descriptor.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuda.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuda_runtime.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuda_runtime_api.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\cuviddec.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\device_types.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\driver_functions.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\driver_types.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\host_config.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\host_defines.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\nvcuvid.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\surface_types.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\texture_types.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\vector_functions.h" />
+    <ClInclude Include="..\..\ThirdParty\Nvidia\vector_types.h" />
+    <ClInclude Include="..\inc\ReassembleAPI.h" />
+    <ClInclude Include="..\inc\RecorderAPI.h" />
+    <ClInclude Include="..\inc\RenderAPI.h" />
+    <ClInclude Include="..\src\Capture\Capture.h" />
+    <ClInclude Include="..\src\channel\AudioChannel.h" />
+    <ClInclude Include="..\src\channel\MediaChannel.h" />
+    <ClInclude Include="..\src\channel\MediaChannelMgr.h" />
+    <ClInclude Include="..\src\Decoder\BaseDecoder.h" />
+    <ClInclude Include="..\src\Decoder\BufferManager\BufferList2.h" />
+    <ClInclude Include="..\src\Decoder\BufferManager\BufferManager.h" />
+    <ClInclude Include="..\src\Decoder\DecodeHandler.h" />
+    <ClInclude Include="..\inc\DecoderAPI.h" />
+    <ClInclude Include="..\src\Decoder\DecoderFactory.h" />
+    <ClInclude Include="..\src\Decoder\DecoderIVS.h" />
+    <ClInclude Include="..\src\Decoder\FrameInfo.h" />
+    <ClInclude Include="..\src\Decoder\HisiAudioDecoder.h" />
+    <ClInclude Include="..\src\Decoder\HisiDecoder.h" />
+    <ClInclude Include="..\src\Decoder\IntelDecoder.h" />
+    <ClInclude Include="..\src\Decoder\NvdiaDecoder.h" />
+    <ClInclude Include="..\src\Decoder\PreDecoder.h" />
+    <ClInclude Include="..\src\Decoder\ThirdPartyDecoder.h" />
+    <ClInclude Include="..\src\MP4Praser\Mp4Box.h" />
+    <ClInclude Include="..\src\MP4Praser\Mp4PraserLib.h" />
+    <ClInclude Include="..\src\MP4Praser\Mp4RW.h" />
+    <ClInclude Include="..\src\MP4Praser\mp4_boxes.h" />
+    <ClInclude Include="..\src\MP4Praser\Single.h" />
+    <ClInclude Include="..\src\MP4Praser\Utls.h" />
+    <ClInclude Include="..\src\Reassemble\AudioReassemble.h" />
+    <ClInclude Include="..\src\Reassemble\DecryptData\Aes256_ctr_partial.h" />
+    <ClInclude Include="..\src\Reassemble\DecryptData\DecryptData.h" />
+    <ClInclude Include="..\src\Reassemble\H264Reassemble.h" />
+    <ClInclude Include="..\src\Reassemble\HevcReassemble.h" />
+    <ClInclude Include="..\src\Reassemble\MjpegReassemble.h" />
+    <ClInclude Include="..\src\Reassemble\PacketMemoryPoolMgr.h" />
+    <ClInclude Include="..\src\Reassemble\PacketReassemble.h" />
+    <ClInclude Include="..\src\Reassemble\SVACReassemble.h" />
+    <ClInclude Include="..\src\Recorder\AVIFileWriter.h" />
+    <ClInclude Include="..\src\Recorder\Mp4FileWriter.h" />
+    <ClInclude Include="..\src\Recorder\Recorder.h" />
+    <ClInclude Include="..\src\Render\AudioOutput.h" />
+    <ClInclude Include="..\src\Render\ColorConvert.h" />
+    <ClInclude Include="..\src\Render\D3dDraw.h" />
+    <ClInclude Include="..\src\Render\DdDraw.h" />
+    <ClInclude Include="..\src\Render\FastMemcpy.h" />
+    <ClInclude Include="..\src\Render\GdiDraw.h" />
+    <ClInclude Include="..\src\Render\Render.h" />
+    <ClInclude Include="..\src\Render\RenderThreadMgr.h" />
+    <ClInclude Include="..\src\Render\VideoOutput.h" />
+    <ClInclude Include="..\src\Render\YuvUtil.h" />
+    <ClInclude Include="..\src\source\AudioConverter.h" />
+    <ClInclude Include="..\src\source\AviFileSource.h" />
+    <ClInclude Include="..\src\source\FileSource.h" />
+    <ClInclude Include="..\src\source\H264Source.h" />
+    <ClInclude Include="..\src\source\MjpegSource.h" />
+    <ClInclude Include="..\src\source\Mp3FileSource.h" />
+    <ClInclude Include="..\src\source\Mp4FileSource.h" />
+    <ClInclude Include="..\src\source\Mpeg4Source.h" />
+    <ClInclude Include="..\src\source\Source.h" />
+    <ClInclude Include="..\src\source\WavFileSource.h" />
+    <ClInclude Include="..\src\Voice\AudioCapture.h" />
+    <ClInclude Include="..\src\Voice\AudioSender.h" />
+    <ClInclude Include="..\src\Voice\NVSTimer\NVSTimer.h" />
+    <ClInclude Include="..\src\Voice\RtspPacket.h" />
+    <ClInclude Include="..\src\Voice\VoiceControl.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
