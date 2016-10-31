@@ -1,0 +1,36 @@
+Huawei respects and promises to protect your privacy. Before you and your company (hereinafter referred to as you) use Huawei eSDK, please read this statement carefully.
+
+To provide you with personalized services more accurately, Huawei may collect and use log information during the interaction between your application and eSDK. This statement illustrates how log information (excluding personal privacy information) will be collected and used.
+
+Collecting Log Information
+1.	When you or your software is using the eSDK, the eSDK records log information about the interaction between you or your application and the eSDK. If the Internet is connected, the collected log information will be uploaded to the eSDK's unified log management center. 
+2.	Logs record the information about eSDK interfaces used by you or your software, including the interface invoking time, interface execution duration, interface name, and input parameters (excluding privacy information such as accounts and passwords), and interface execution result (excluding privacy information such as accounts and passwords).
+
+Using the Collected Log Information
+1.	Huawei will analyze the collected log information, identify exceptions or errors that occur during your service execution, provide warning and solutions accordingly, and optimize eSDK products accurately.
+2.	By analyzing log information, Huawei can better understand how you use the eSDK and provide personalized services more suitable for you.
+
+Application Scope
+Unless otherwise specified, Huawei eSDK products provide services by following this statement.
+
+Modification
+If some adjustments are required for the information to collect, we may modify the clauses of this statement. The new clauses are released together with the software version. If you have any objections to the new clauses, disable the log collection function by following the instructions in the operation guide; otherwise, you are regarded as acknowledging all the clauses.
+
+
+华为尊重并承诺保护您的隐私，在您以及您所在的公司（以下统称您）使用华为eSDK前，请您仔细阅读如下声明。
+
+为向您提供更准确的个性化服务，在您的应用与eSDK软件交互的过程，华为可能会以如下方式收集和使用软件执行的相关日志信息，本声明解释了这些情况下的信息收集和使用情况，所收集信息不会包括个人隐私信息。
+
+日志信息的收集
+1）当您或您的软件在使用eSDK的过程中，eSDK会记录您以及应用与eSDK的交互日志，在与互联网连接的情况下，相关日志会上传到eSDK统一的日志管理中心。
+2）日志中会记录您或您的软件使用eSDK接口的情况，包括调用接口时间、接口执行耗时、接口名称、输入参数（不包括账号、密码等隐私信息），接口执行结果（不包括账号、密码等隐私信息）。
+
+对收集信息的使用
+1、华为会对采集的日志信息进行分析，识别您在业务执行过程中出现的异常、错误，并基于您的软件在使用eSDK过程中出现的这些信息给您提供预警和解决方案，并针对性对eSDK产品进行优化。
+2、通过对日志信息的分析，可以让华为更好的了解你们如何使用eSDK，进而有针对性的提供更个性化的服务。
+
+本文的适用范围
+除特殊说明，华为eSDK产品提供的服务均遵循此说明。
+
+本说明的修改
+如因各方面因素需要对收集的信息进行调整，我们可能随时修改本说明的条款，最新条款均随软件版本一同发布，如对新的条款有异议，可以参考使用手册关闭软件中的日志采集功能，否则默认认可所有协议条款。
