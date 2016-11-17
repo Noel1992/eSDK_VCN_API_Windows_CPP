@@ -1,0 +1,184 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Title">DEMO</sys:String>
+    <sys:String x:Key="LogInAndLogOut">LogIn/Out</sys:String>
+    <sys:String x:Key="PaneManagement">Pane Control</sys:String>
+    <sys:String x:Key="LiveAndPtz">Live/PTZ</sys:String>
+    <sys:String x:Key="Record">Record</sys:String>
+    <sys:String x:Key="Replay">Replay</sys:String>
+    <sys:String x:Key="TalkAndBroadcast">Talkback/Broadcast</sys:String>
+    <sys:String x:Key="DownloadAndCapture">Download/Snapshot</sys:String>
+    <sys:String x:Key="Init">Initialize</sys:String>
+    <sys:String x:Key="GetVersion">Version</sys:String>
+    <sys:String x:Key="Release">Release</sys:String>
+    <sys:String x:Key="User">User</sys:String>
+    <sys:String x:Key="Password">Password</sys:String>
+    <sys:String x:Key="Serve">Server</sys:String>
+    <sys:String x:Key="Port">Port</sys:String>
+    <sys:String x:Key="OldPassword">Old Password</sys:String>
+    <sys:String x:Key="NewPassword">New Password</sys:String>
+    <sys:String x:Key="ModifyPassword">Change Password</sys:String>
+    <sys:String x:Key="eSDKCode">eSDK Code</sys:String>
+    <sys:String x:Key="LogIn">LogIn</sys:String>
+    <sys:String x:Key="LogOut">LogOut</sys:String>
+    <sys:String x:Key="LogSuccess">LogIn Success</sys:String>
+    <sys:String x:Key="LogFailed">LogIn Fail</sys:String>
+    <sys:String x:Key="Success"> Success</sys:String>
+    <sys:String x:Key="Failed">Fail</sys:String>
+    <sys:String x:Key="DisplayScale">Display Scale</sys:String>
+    <sys:String x:Key="SetDisplayScale">Set Display Scale</sys:String>
+    <sys:String x:Key="FullScreen">Full Screen</sys:String>
+    <sys:String x:Key="QuitFullScreen">Quit Full Screen</sys:String>
+
+    <sys:String x:Key="SetToolbar">Set Toolbar</sys:String>
+    <sys:String x:Key="Layout1">1-Window</sys:String>
+    <sys:String x:Key="Layout6">6-Window</sys:String>
+    <sys:String x:Key="Layout9">9-Window</sys:String>
+
+    <sys:String x:Key="ActivePanID">Active Pane</sys:String>
+    <sys:String x:Key="FreePanID">Idle Pane</sys:String>
+    <sys:String x:Key="ActivePanCameraCode ">Active Pane CameraCode</sys:String>
+
+    <sys:String x:Key="GetActivePanID">Get Active Pane</sys:String>
+    <sys:String x:Key="GetFreePanID">Get Idle Pane</sys:String>
+    <sys:String x:Key="GetActivePanCameraCode">Get CameraCode</sys:String>
+
+    <sys:String x:Key="GetCameraList">Get Camera List</sys:String>
+    <sys:String x:Key="CameraList">Camera List</sys:String>
+    <sys:String x:Key="PlayParameter">Play Para</sys:String>
+
+    <sys:String x:Key="PlayPane">Play Pane</sys:String>
+    <sys:String x:Key="RealPlayStop">Stop RealPlay</sys:String>
+    <sys:String x:Key="RealPlay">Start RealPlay</sys:String>
+
+    <sys:String x:Key="LeftUP">Up Left</sys:String>
+    <sys:String x:Key="Left">Left</sys:String>
+    <sys:String x:Key="LeftDown">Down Left</sys:String>
+    <sys:String x:Key="RightUP">Up Right</sys:String>
+    <sys:String x:Key="Right">Right</sys:String>
+    <sys:String x:Key="RightDown">Down Right</sys:String>
+    <sys:String x:Key="Down">Down</sys:String>
+    <sys:String x:Key="UP">Up</sys:String>
+    <sys:String x:Key="PtzOp">PTZ Control</sys:String>
+
+    <sys:String x:Key="PresetName">Preset Name</sys:String>
+    <sys:String x:Key="PresetIndex">Preset Index</sys:String>
+    <sys:String x:Key="AddPreset">Add Preset</sys:String>
+
+    <sys:String x:Key="QueryPreset">Query Preset</sys:String>
+    <sys:String x:Key="DeletePreset">Delete Preset</sys:String>
+    <sys:String x:Key="InvokePreset">Invoke Preset</sys:String>
+
+    <sys:String x:Key="Lock">Lock</sys:String>
+    <sys:String x:Key="UnLock">UnLock</sys:String>
+    <sys:String x:Key="ZoomOut">Zoom In</sys:String>
+    <sys:String x:Key="ZoomIn">Zoom Out</sys:String>
+    <sys:String x:Key="PtzLocked">PTZ Locked</sys:String>
+
+    <sys:String x:Key="OK">OK</sys:String>
+    <sys:String x:Key="Cancle">Cancle</sys:String>
+    <sys:String x:Key="PleaseEnterName">Please Enter Name</sys:String>
+
+    <sys:String x:Key="CameraCode">CameraCode</sys:String>
+    <sys:String x:Key="RecordTime">RecordDuration</sys:String>
+    <sys:String x:Key="StartPLATRecord">Start Platform Record</sys:String>
+    <sys:String x:Key="StopPLATRecord">Stop Platform Record</sys:String>
+    <sys:String x:Key="StartPURecord">Start PU Record</sys:String>
+    <sys:String x:Key="StopPURecord">Stop PU Record</sys:String>
+    <sys:String x:Key="StartLocalRecord">Start Local Record</sys:String>
+    <sys:String x:Key="StopLocalRecord">Stop Local Record</sys:String>
+    <sys:String x:Key="RecordPara">Record Para</sys:String>
+    <sys:String x:Key="WndID">WindowID</sys:String>
+    <sys:String x:Key="LocalFilePath">Local FilePath</sys:String>
+    <sys:String x:Key="LocalFileName">Local FileName</sys:String>
+    
+    <sys:String x:Key="StartTime">Start Time</sys:String>
+    <sys:String x:Key="EndTime">End Time</sys:String>
+    <sys:String x:Key="RecordType">Record Type</sys:String>
+    <sys:String x:Key="Query">Query</sys:String>
+    <sys:String x:Key="PURecord">PU Record</sys:String>
+    <sys:String x:Key="PLATRecord">Platform Record</sys:String>
+    <sys:String x:Key="Operation">Operation</sys:String>
+
+    <sys:String x:Key="StartReplay">Start Replay</sys:String>
+    <sys:String x:Key="StopReplay">Stop Replay</sys:String>
+    <sys:String x:Key="StartLocalReplay">Start Local Replay</sys:String>
+    <sys:String x:Key="StopLocalReplay">Stop Local Replay</sys:String>
+
+    <sys:String x:Key="PauseReplay">Pause</sys:String>
+    <sys:String x:Key="ResumeReplay">Resume</sys:String>
+    <sys:String x:Key="FrameReplay">Frame Play</sys:String>
+    <sys:String x:Key="FastReplay">Fast Forward</sys:String>
+    <sys:String x:Key="BackReplay">Backward</sys:String>
+    <sys:String x:Key="SetReplaySpeed">Set Replay Speed</sys:String>
+    <sys:String x:Key="PlayBackTime">Playback Time</sys:String>
+
+    <sys:String x:Key="StartVoiceTalkback">Start Talkback</sys:String>
+    <sys:String x:Key="TalkParam">Media Para</sys:String>
+    <sys:String x:Key="TalkCameraCode">CameraCode</sys:String>
+
+    <sys:String x:Key="StopVoiceTalkback">Stop Talkback</sys:String>
+    <sys:String x:Key="TalkbackHandle">Handle</sys:String>
+
+    <sys:String x:Key="BroadcastDeviceCode">BroadcastDevice</sys:String>
+    <sys:String x:Key="AddBroadcastDevice">Add Device</sys:String>
+    <sys:String x:Key="StartRealBroadcast">Start Real Broadcast</sys:String>
+    <sys:String x:Key="StopRealBroadcast">Stop Real Broadcast</sys:String>
+    <sys:String x:Key="DeleteBroadcastDevice">Delete Device</sys:String>
+
+    <sys:String x:Key="StartFileBroadcast">Start File Broadcast</sys:String>
+    <sys:String x:Key="StopFileBroadcast">Stop File Broadcast</sys:String>
+    <sys:String x:Key="FileName">File Name</sys:String>
+    <sys:String x:Key="CycleType">Cycle</sys:String>
+    <sys:String x:Key="CycleTrue">Yes</sys:String>
+    <sys:String x:Key="CycleFalse">No</sys:String>
+    
+    <sys:String x:Key="DownLoadPara">DownLoad Para</sys:String>
+    <sys:String x:Key="SaveFilePath">Save Path</sys:String>
+    <sys:String x:Key="StartPlatformDownload">PlatformDownload</sys:String>
+    <sys:String x:Key="StartPUDownload">PUDownload</sys:String>
+
+    <sys:String x:Key="DownLoadHandle">Handle</sys:String>
+    <sys:String x:Key="StopPlatformDownload">PlatformStop</sys:String>
+    <sys:String x:Key="StopPUDownload">PUStop</sys:String>
+    <sys:String x:Key="DownloadPause">Pause</sys:String>
+    <sys:String x:Key="DownloadResume">Resume</sys:String>
+    <sys:String x:Key="DownloadInfo">Info</sys:String>
+    <sys:String x:Key="GetDownloadInfo">Get Info</sys:String>
+
+    <sys:String x:Key="SnapshotFielPath">Save Path</sys:String>
+    <sys:String x:Key="LocalSnapshot">Snapshot</sys:String>
+    <sys:String x:Key="PicType">Format</sys:String>
+
+    <sys:String x:Key="Status">Status</sys:String>
+    <sys:String x:Key="Speed">Speed (kB/s)</sys:String>
+    <sys:String x:Key="Size">Size (kB)</sys:String>
+    <sys:String x:Key="TimeLeft">Time Left (s)</sys:String>
+    <sys:String x:Key="Progress">Progress</sys:String>
+    <sys:String x:Key="NameRuleToolTip">0-CameraName_SN_Time(YYYY-MM-DD-hh-mm-ss)[Default]；1-CameraName_Time(YYYY-MM-DD-hh-mm-ss)_SN；2-Time(YYYY-MM-DD-hh-mm-ss)_CameraName_SN</sys:String>
+    <sys:String x:Key="SplitterType">Splitter：1-By Time，2-By Volume</sys:String>
+
+    <sys:String x:Key="TalkProtocolParam">ProtocolType:1-UDP;DirectFirst:Direct Connect</sys:String>
+    <sys:String x:Key="DisplayScaleToolTip">Display Scale：1-Original 2-Full Scale</sys:String>
+
+    <sys:String x:Key="SourceScale">Original</sys:String>
+    <sys:String x:Key="FullScale">Full Scale</sys:String>
+    <sys:String x:Key="PassWordError">Password Not Match</sys:String>
+
+    <sys:String x:Key="All">All</sys:String>
+    <sys:String x:Key="LocalRecord">Local Record</sys:String>
+    <sys:String x:Key="Zoom">Zoom</sys:String>
+    <sys:String x:Key="PTZ">PTZ</sys:String>
+    <sys:String x:Key="Bookmark">Bookmark</sys:String>
+    <sys:String x:Key="AlarmWin">Alarm</sys:String>
+    <sys:String x:Key="Snapshot">Snapshot</sys:String>
+    <sys:String x:Key="DirectFirst">DirectConnect</sys:String>
+
+    <sys:String x:Key="Select">Select</sys:String>
+    <sys:String x:Key="SelectFile">SelectFile</sys:String>
+    <sys:String x:Key="BroadcastDeviceList">BroadcastDeviceList</sys:String>
+
+    <sys:String x:Key="CopyCameraCode">CopyCameraCode</sys:String>
+    <sys:String x:Key="CopyRecordInfo">CopyRecordInfo</sys:String>
+</ResourceDictionary>

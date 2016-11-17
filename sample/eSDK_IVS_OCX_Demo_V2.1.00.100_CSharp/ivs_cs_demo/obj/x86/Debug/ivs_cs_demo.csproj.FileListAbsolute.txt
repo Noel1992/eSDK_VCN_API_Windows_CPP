@@ -1,0 +1,3 @@
+D:\MKTS_eSDK_Green_SVN\eSDK_Solution_V200R001\trunk\eSDK_IVS_V200R001\Client_Ext\test\demo\ivs_cs_demo_ocx\CSharp\eSDK_IVS_OCX_Demo_CSharp\ivs_cs_demo\obj\x86\Debug\Interop.IVS_OCXPlayer.dll
+D:\MKTS_eSDK_Green_SVN\eSDK_Solution_V200R001\trunk\eSDK_IVS_V200R001\Client_Ext\test\demo\ivs_cs_demo_ocx\CSharp\eSDK_IVS_OCX_Demo_CSharp\ivs_cs_demo\obj\x86\Debug\AxInterop.IVS_OCXPlayer.dll
+D:\MKTS_eSDK_Green_SVN\eSDK_Solution_V200R001\trunk\eSDK_IVS_V200R001\Client_Ext\test\demo\ivs_cs_demo_ocx\CSharp\eSDK_IVS_OCX_Demo_CSharp\ivs_cs_demo\obj\x86\Debug\ivs_cs_demo.csproj.ResolveComReference.cache

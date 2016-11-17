@@ -1,0 +1,34 @@
+﻿Build started 2016/9/19 11:32:30.
+     1>Project "D:\MKTS_eSDK_Green_SVN\eSDK_Solution_V200R001\trunk\eSDK_IVS_V200R001\Client_Ext\test\demo\ivs_cs_demo_sdk\C++\IVS_API_Demo\IVS_Demo\IVS_Demo.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\IVS_Demo.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\common /I..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\IVS_Demo.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\common /I..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\IVS_Demo.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Common\eSDKUtil.cpp ..\Common\IniFile.cpp ..\Common\Language.cpp IVSAlarmPage.cpp IVSDownLoadPage.cpp IVSPlayBackPage.cpp IVSRealPlayPage.cpp IVSSDKSheet.cpp IVSTalkBackPage.cpp IVSUsrMgrPage.cpp IVS_Demo.cpp IVS_DemoDlg.cpp
+         IVS_DemoDlg.cpp
+         IVS_Demo.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivsrealplaypage.h(3): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         IVSUsrMgrPage.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivsusrmgrpage.h(2): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         IVSTalkBackPage.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivstalkbackpage.h(2): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         IVSSDKSheet.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivsrealplaypage.h(3): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         IVSRealPlayPage.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivsrealplaypage.h(3): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         IVSPlayBackPage.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivsplaybackpage.h(2): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         IVSDownLoadPage.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivsdownloadpage.h(2): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         IVSAlarmPage.cpp
+     1>d:\mkts_esdk_green_svn\esdk_solution_v200r001\trunk\esdk_ivs_v200r001\client_ext\test\demo\ivs_cs_demo_sdk\c++\ivs_api_demo\ivs_demo\ivsalarmpage.h(2): fatal error C1083: Cannot open include file: 'IVS_SDK.h': No such file or directory
+         Language.cpp
+         IniFile.cpp
+         eSDKUtil.cpp
+         Generating Code...
+     1>Done Building Project "D:\MKTS_eSDK_Green_SVN\eSDK_Solution_V200R001\trunk\eSDK_IVS_V200R001\Client_Ext\test\demo\ivs_cs_demo_sdk\C++\IVS_API_Demo\IVS_Demo\IVS_Demo.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.51

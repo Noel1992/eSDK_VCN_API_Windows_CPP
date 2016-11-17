@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C03C2CC6-54B8-4EA8-9442-3DEC7B140575}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ivs_cs_demo</RootNamespace>
+    <AssemblyName>ivs_cs_demo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Common\Business\DeviceInfoBusiness.cs" />
+    <Compile Include="Common\Business\PTZBusiness.cs" />
+    <Compile Include="Common\Business\RecordSearchBusiness.cs" />
+    <Compile Include="Common\Entity\CameraType.cs" />
+    <Compile Include="Common\Entity\CaptureConfigEntity.cs" />
+    <Compile Include="Common\Entity\DateTimeExtensions.cs" />
+    <Compile Include="Common\Entity\DevFormType.cs" />
+    <Compile Include="Common\Entity\DomainEntity.cs" />
+    <Compile Include="Common\Entity\IVSDeviceType.cs" />
+    <Compile Include="Common\Entity\LocalParameterSetEntity.cs" />
+    <Compile Include="Common\Entity\LocalRecordParam.cs" />
+    <Compile Include="Common\Entity\MediaPara.cs" />
+    <Compile Include="Common\Entity\PageInfo.cs" />
+    <Compile Include="Common\Entity\PlaybackParam.cs" />
+    <Compile Include="Common\Entity\PTZPresetEntity.cs" />
+    <Compile Include="Common\Entity\RecordDataInfoEntity.cs" />
+    <Compile Include="Common\Entity\RecordDownloadInfoEntity.cs" />
+    <Compile Include="Common\Entity\RecordDownloadParam.cs" />
+    <Compile Include="Common\Entity\RecordDownloadStatusType.cs" />
+    <Compile Include="Common\Entity\RecordQueryResultEntity.cs" />
+    <Compile Include="Common\Entity\SnapshotFormat.cs" />
+    <Compile Include="Common\Entity\TalkbackParam.cs" />
+    <Compile Include="Common\Entity\UserEntity.cs" />
+    <Compile Include="Common\Entity\VideoEntity.cs" />
+    <Compile Include="Common\LogService\ServiceManager.cs" />
+    <Compile Include="Common\OCX\frmLocalOCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\OCX\frmLocalOCX.Designer.cs">
+      <DependentUpon>frmLocalOCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Service\PtzService.cs" />
+    <Compile Include="Common\Entity\CuResultCode.cs" />
+    <Compile Include="Common\Entity\LivePlayerToolType.cs" />
+    <Compile Include="Common\Entity\LoginInfo.cs" />
+    <Compile Include="Common\Entity\OcxResult.cs" />
+    <Compile Include="Common\Entity\PlayerLayoutType.cs" />
+    <Compile Include="Common\Entity\PtzOperationType.cs" />
+    <Compile Include="Common\LogService\LogService.cs" />
+    <Compile Include="Common\Utils\DelegateCommand.cs" />
+    <Compile Include="Common\Utils\OcxHelper.cs" />
+    <Compile Include="Common\Utils\StringHelper.cs" />
+    <Compile Include="Common\Utils\XmlHelper.cs" />
+    <Compile Include="UIComponent\DownloadAndCaptureUserControls.xaml.cs">
+      <DependentUpon>DownloadAndCaptureUserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponent\LayOutManageUserControls.xaml.cs">
+      <DependentUpon>LayOutManageUserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponent\LiveVideoPtzUserControls.xaml.cs">
+      <DependentUpon>LiveVideoPtzUserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponent\LogInLogOutControls.xaml.cs">
+      <DependentUpon>LogInLogOutControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponent\PlayOcxUserControl.xaml.cs">
+      <DependentUpon>PlayOcxUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponent\RecordUserControls.xaml.cs">
+      <DependentUpon>RecordUserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponent\ReplayUserControls.xaml.cs">
+      <DependentUpon>ReplayUserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponent\TalkAndBroadcastUserControls.xaml.cs">
+      <DependentUpon>TalkAndBroadcastUserControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\DownloadAndCaptureViewModel.cs" />
+    <Compile Include="ViewModel\LayOutManageViewModel.cs" />
+    <Compile Include="ViewModel\LiveVideoPtzViewModel.cs" />
+    <Compile Include="ViewModel\LogInLogOutViewModel.cs" />
+    <Compile Include="ViewModel\PlayOcxViewModel.cs" />
+    <Compile Include="ViewModel\RecordViewModel.cs" />
+    <Compile Include="ViewModel\ReplayViewModel.cs" />
+    <Compile Include="ViewModel\TalkAndBroadcastViewModel.cs" />
+    <Compile Include="ViewModel\VideoPlayer.cs" />
+    <Page Include="Resources\ResultCode\CUResultCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Language\en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\ResultCode\OCXResultCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Style\ButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Style\TextBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <Page Include="UIComponent\DownloadAndCaptureUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponent\LayOutManageUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponent\LiveVideoPtzUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponent\LogInLogOutControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponent\PlayOcxUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponent\RecordUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponent\ReplayUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponent\TalkAndBroadcastUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Language\zh-CN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Common\OCX\frmLocalOCX.resx">
+      <DependentUpon>frmLocalOCX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\IVS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BallMachineOn.png" />
+    <Resource Include="Images\BallMachineOff.png" />
+    <Resource Include="Images\FixedBoltOff.png" />
+    <Resource Include="Images\FixedBoltOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxIVS_OCXPlayer">
+      <Guid>{72B4D993-872D-422B-AFAB-BE389255CF81}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="IVS_OCXPlayer">
+      <Guid>{72B4D993-872D-422B-AFAB-BE389255CF81}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

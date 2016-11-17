@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="ivs_cs_demo.ReplayUserControls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+            d:DesignHeight="600" d:DesignWidth="800" Background="#F7F7F7" >
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200">
+                </RowDefinition>
+                <RowDefinition Height="40">
+                </RowDefinition>
+                <RowDefinition Height="90">
+                </RowDefinition>
+                <RowDefinition Height="*">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" ></ColumnDefinition>
+                    <ColumnDefinition Width="160" ></ColumnDefinition>
+                    <ColumnDefinition Width="120" ></ColumnDefinition>
+                    <ColumnDefinition Width="160" ></ColumnDefinition>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label  Style="{DynamicResource LabelStyle}"   Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource StartTime}" Width="100" Height="30"></Label>
+                <Label  Style="{DynamicResource LabelStyle}"   Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource EndTime}" Width="100" Height="30"></Label>
+                <TextBox Name="StartTime"  VerticalContentAlignment="Center"  Grid.Column="1" Grid.Row="0" Width="160" Height="30"  Style="{DynamicResource TextTextBoxStyle}"></TextBox>
+                <TextBox Name="EndTime"   VerticalContentAlignment="Center"  Grid.Column="3" Grid.Row="0" Width="160" Height="30"  Style="{DynamicResource TextTextBoxStyle}" ></TextBox>
+                <Button Grid.Column="4" HorizontalAlignment="Left" Grid.Row="0" Content="{DynamicResource Query}" Width="120" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding QuerytCommand}"></Button>
+                <Label  Style="{DynamicResource LabelStyle}"   Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource CameraCode}" Width="100" Height="30"></Label>
+                <Label  Style="{DynamicResource LabelStyle}"   Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource RecordType}" Width="100" Height="30"></Label>
+                <TextBox Name="CameraCode"  VerticalContentAlignment="Center"  Grid.Column="1" Grid.Row="1" Width="160" Height="30"  Style="{DynamicResource TextTextBoxStyle}"></TextBox>
+                <ComboBox Name="RecordType" HorizontalAlignment="Left" FontFamily="SimSun"  FontSize="13" VerticalContentAlignment="Center"  Grid.Column="3" Grid.Row="1" Width="153" Height="30" Margin="10,5,0,5" Grid.ColumnSpan="2">
+                </ComboBox>
+
+                <DataGrid AutoGenerateColumns="False" CanUserAddRows="False"  Grid.ColumnSpan="5" Grid.Row="2" Height="120" HorizontalAlignment="Stretch"  Name="RecordList" VerticalAlignment="Stretch" ItemsSource="{Binding}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{DynamicResource CameraCode}" Binding="{Binding CameraCode}"   IsReadOnly="True"  Width="100"/>
+                        <DataGridTextColumn Header="{DynamicResource StartTime}"  Binding="{Binding LocalStartTime}"   IsReadOnly="True"  Width="150">
+                          
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource EndTime}"  Binding="{Binding LocalEndTime}"  IsReadOnly="True"  Width="150"/>
+                        <DataGridTextColumn Header="{DynamicResource RecordType}" Binding="{Binding RecordMethod}"   IsReadOnly="True"  Width="100"/>
+                        <DataGridTextColumn Header="{DynamicResource WndID}" Binding="{Binding WndID, Mode=TwoWay}" Width="80"/>
+                        <DataGridTemplateColumn  Header="{DynamicResource Operation}"   Width="130">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" >
+                                        <Button Name="StartReplay" Content="{DynamicResource StartReplay}"  Style="{DynamicResource btnFontButtonStyle}"  Click="StartReplay_Click"></Button>
+                                        <Button  Name="StopReplay" Content="{DynamicResource StopReplay}" Style="{DynamicResource btnFontButtonStyle}"  Click="StopReplay_Click"></Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn >
+                    </DataGrid.Columns>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="{DynamicResource CopyRecordInfo}" Command="{Binding Copy}"></MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" ></ColumnDefinition>
+                    <ColumnDefinition Width="160" ></ColumnDefinition>
+                    <ColumnDefinition Width="80" ></ColumnDefinition>
+                    <ColumnDefinition Width="80" ></ColumnDefinition>
+                    <ColumnDefinition Width="140" ></ColumnDefinition>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label  Style="{DynamicResource LabelStyle}" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource LocalFileName}" Width="114" Height="30" Margin="0,5"></Label>
+                <Label  Style="{DynamicResource LabelStyle}"   Grid.Column="2"  HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource WndID}" Width="100" Height="30"></Label>
+                <TextBox Name="LocalFileName" GotMouseCapture="LocalFileName_GotMouseCapture"  VerticalContentAlignment="Center"  Grid.Column="1" Height="30"  Style="{DynamicResource TextTextBoxStyle}" Grid.ColumnSpan="2" Margin="0,5,82,5"></TextBox>
+                <TextBox Name="WndID"   VerticalContentAlignment="Center" HorizontalAlignment="Left"  Grid.Column="3" Height="30"  Width="75" Style="{DynamicResource TextTextBoxStyle}"></TextBox>
+                <Button Grid.Column="4" HorizontalAlignment="Left" Content="{DynamicResource StartLocalReplay}" Width="135" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StartLocalReplayCommand}"></Button>
+                <Button Grid.Column="5" HorizontalAlignment="Left" Content="{DynamicResource StopLocalReplay}" Width="135" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StopLocalReplayCommand}"></Button>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="10*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" ></ColumnDefinition>
+                    <ColumnDefinition Width="90" ></ColumnDefinition>
+                    <ColumnDefinition Width="90" ></ColumnDefinition>
+                    <ColumnDefinition Width="90" ></ColumnDefinition>
+                    <ColumnDefinition Width="160" ></ColumnDefinition>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Content="{DynamicResource PauseReplay}" Width="88" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding PauseReplayCommand}"></Button>
+                <Button Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Right" Content="{DynamicResource ResumeReplay}" Width="88" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding ResumeReplayCommand}"></Button>
+                <Button Grid.Column="2"  Grid.Row="0" HorizontalAlignment="Center" Content="{DynamicResource FrameReplay}" Width="88" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding FrameReplayCommand}"></Button>
+                <Button Grid.Column="3"  Grid.Row="0" HorizontalAlignment="Center" Content="{DynamicResource FastReplay}" Width="88" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding FastReplayCommand}"></Button>
+                <Button Grid.Column="4"  Grid.Row="0" HorizontalAlignment="Left" Content="{DynamicResource BackReplay}" Width="88" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding BackReplayCommand}"></Button>
+                <Button  Grid.Column="1"  Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Content="{DynamicResource PlayBackTime}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding PlayBackTimeCommand}" Margin="0,5"></Button>
+                <TextBox Name="Speed"   Grid.Row="1"  VerticalContentAlignment="Center"  Grid.Column="2" Height="30"  Style="{DynamicResource TextTextBoxStyle}" Grid.ColumnSpan="3" Margin="61,5,130,5"></TextBox>
+
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"></ColumnDefinition>
+                    <ColumnDefinition Width="650"></ColumnDefinition>
+                    <ColumnDefinition  Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label  Style="{DynamicResource LabelStyle}"   Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Right" Content="{DynamicResource eSDKCode}" Width="100" Height="30"></Label>
+                <TextBox Name="eSDKCodeTextBlock" Style="{DynamicResource TextBlockStyle1}"  Grid.Column="1" Grid.Row="0" Width="650" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"></TextBox>
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+        
+</UserControl>

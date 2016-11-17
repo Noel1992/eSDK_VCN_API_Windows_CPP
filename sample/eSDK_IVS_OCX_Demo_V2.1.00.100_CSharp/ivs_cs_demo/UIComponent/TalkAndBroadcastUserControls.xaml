@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="ivs_cs_demo.TalkAndBroadcastUserControls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="600" d:DesignWidth="820" Background="#F7F7F7" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90">
+            </RowDefinition>
+            <RowDefinition Height="180">
+            </RowDefinition>
+            <RowDefinition Height="*">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" BorderThickness="0,0,0,2"  BorderBrush="#AAAAAA">
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" ></ColumnDefinition>
+                    <ColumnDefinition Width="160" ></ColumnDefinition>
+                    <ColumnDefinition Width="90" ></ColumnDefinition>
+                    <ColumnDefinition Width="150" ></ColumnDefinition>
+                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label  Style="{DynamicResource LabelStyle}" Grid.Row="0"   Grid.Column="0" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource TalkParam}" Width="100" Height="30"></Label>
+                <Label  Style="{DynamicResource LabelStyle}"   Grid.Row="0"  Grid.Column="2"  HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource TalkCameraCode}" Width="100" Height="30"></Label>
+
+                <ComboBox Name="ProtocolType" HorizontalAlignment="Center"  FontSize="13" FontFamily="SimSun" VerticalContentAlignment="Center" Grid.Column="1" Width="60" Height="25" Margin="3,10,97,9"></ComboBox>
+                <CheckBox Name="DirectFirst" Grid.Column="1" Content="{DynamicResource DirectFirst}" FontFamily="SimSun" FontSize="13" Margin="68,13,63,9" Grid.ColumnSpan="2"></CheckBox>
+                
+                <TextBox Name="TalkCameraCode"   VerticalContentAlignment="Center"  Grid.Column="3" Width="150" Height="30"  Style="{DynamicResource TextTextBoxStyle}" ></TextBox>
+                <Button Grid.Column="4" HorizontalAlignment="Left" Content="{DynamicResource StartVoiceTalkback}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StartVoiceTalkbackCommand}" Margin="4,7,0,7"></Button>
+                <Label  Style="{DynamicResource LabelStyle}" Grid.Row="1" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource TalkbackHandle}" Width="100" Height="30" Margin="0,6,0,8"></Label>
+                <TextBox Name="TalkbackHandle"  Grid.Row="1"    VerticalContentAlignment="Center"  Grid.Column="1" Height="30"  Style="{DynamicResource TextTextBoxStyle}" Margin="0,6,0,8"></TextBox>
+                <Button Grid.Column="4"  Grid.Row="1" HorizontalAlignment="Left" Content="{DynamicResource StopVoiceTalkback}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StopVoiceTalkbackCommand}" Margin="4,7,0,7"></Button>
+
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="0" BorderThickness="0,0,0,2"  BorderBrush="#AAAAAA">
+            <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45">
+                </RowDefinition>
+                <RowDefinition Height="45">
+                </RowDefinition>
+                <RowDefinition Height="*">
+                </RowDefinition>
+                <RowDefinition Height="45">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" ></ColumnDefinition>
+                <ColumnDefinition Width="160" ></ColumnDefinition>
+                <ColumnDefinition Width="90" ></ColumnDefinition>
+                <ColumnDefinition Width="150" ></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+             <TextBox Name="BroadcastDeviceCode" VerticalContentAlignment="Center"  Grid.Column="1" Height="30"  Style="{DynamicResource TextTextBoxStyle}" Margin="0,7,0,8"></TextBox>
+            <Button Grid.Column="3" HorizontalAlignment="Left" Content="{DynamicResource AddBroadcastDevice}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding AddBroadcastDeviceCommand}" Margin="4,7,0,8"></Button>
+            <Button Grid.Column="4" HorizontalAlignment="Left" Content="{DynamicResource DeleteBroadcastDevice}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding DeleteBroadcastDeviceCommand}" Margin="4,7,0,8"></Button>
+            <Button Grid.Column="3"  Grid.Row="1" HorizontalAlignment="Left" Content="{DynamicResource StartRealBroadcast}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StartRealBroadcastCommand}" Margin="4,7,0,8"></Button>
+            <Button Grid.Column="4"  Grid.Row="1" HorizontalAlignment="Left" Content="{DynamicResource StopRealBroadcast}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StopRealBroadcastCommand}" Margin="4,7,0,8"></Button>
+
+            <Label  Style="{DynamicResource LabelStyle}" Grid.Row="3"   Grid.Column="0" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource FileName}" Width="100" Height="30"></Label>
+            <TextBox Name="FileName" VerticalContentAlignment="Center" Grid.Row="3"  GotMouseCapture="FileName_GotMouseCapture"  Grid.Column="1" Height="30"  Style="{DynamicResource TextTextBoxStyle}"  ></TextBox>
+            <Button Grid.Column="4"  Grid.Row="3" HorizontalAlignment="Left" Content="{DynamicResource StartFileBroadcast}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StartFileBroadcastCommand}" Margin="4,4,0,4"></Button>
+            <Button Grid.Column="4"  Grid.Row="3" HorizontalAlignment="Left" Content="{DynamicResource StopFileBroadcast}" Width="145" Height="30" Style="{DynamicResource btnFontButtonStyle}"  Command="{Binding StopFileBroadcastCommand}" Margin="151,4,0,4"></Button>
+            <Label  Style="{DynamicResource LabelStyle}" Grid.Row="3"   Grid.Column="2" HorizontalAlignment="Right"  HorizontalContentAlignment="Right" Content="{DynamicResource CycleType}" Width="80" Height="30"></Label>
+            <ComboBox Name="CycleType" HorizontalAlignment="Right" FontFamily="SimSun"  FontSize="13" VerticalContentAlignment="Center"  Grid.Column="3" Grid.Row="3" Width="145" Height="30" Margin="0,4,2,4" />
+            <Label Style="{DynamicResource LabelStyle}" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Content="{DynamicResource BroadcastDeviceCode}" Width="120" Height="30" Margin="0,6,2,9"></Label>
+            <Label Style="{DynamicResource LabelStyle}" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Content="{DynamicResource BroadcastDeviceList}" Width="120" Height="30" Margin="0,44,1,16" Grid.RowSpan="2"></Label>
+            <ListBox Name="BroadcastDeviceList" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding CameraCode}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                    <ListBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Copy" Command="{Binding Copy}"></MenuItem>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                </ListBox>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="2" Grid.Column="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110"></ColumnDefinition>
+                <ColumnDefinition Width="650"></ColumnDefinition>
+                <ColumnDefinition  Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label  Style="{DynamicResource LabelStyle}"   Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Right" Content="{DynamicResource eSDKCode}" Width="100" Height="30"></Label>
+            <TextBox Name="eSDKCodeTextBlock" Style="{DynamicResource TextBlockStyle1}"  Grid.Column="1" Grid.Row="0" Width="650" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"></TextBox>
+
+        </Grid>
+    </Grid>
+</UserControl>
